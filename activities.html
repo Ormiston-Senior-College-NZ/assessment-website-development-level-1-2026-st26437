@@ -1,15 +1,225 @@
 <!DOCTYPE html>
-<html lang ="en">
-<head>
-    <link rel="stylesheet" href="css/style.css">
 
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Classes - Urban Flow</title>
+
+<link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
+<header>
 
+   <!-- Navigation Bar -->
+
+   <nav class="navbar">
+
+       <!-- Logo -->
+
+       <div class="logo">
+
+           <img src="images/logo.png" class="logo-img" alt="Urban Flow Logo">
+
+       </div>
+
+
+
+       <!-- Navigation Links -->
+
+       <ul class="nav-menu">
+
+           <li><a href="home.html">Home</a></li>
+
+           <li><a href="classes.html">Classes</a></li>
+
+           <li><a href="contact.html">Join</a></li>
+
+       </ul>
+
+   </nav>
+
+</header>
+
+
+
+<main>
+
+   <!-- Hero Section -->
+
+   <section class="hero-classes">
+
+       <h1>Our Classes</h1>
+
+       <p>Choose your style and level. Everyone is welcome!</p>
+
+   </section>
+
+
+
+   <!-- Classes Gallery -->
+
+   <section class="classes-gallery">
+
+       <!-- Hip Hop Class -->
+
+       <div class="class-block">
+
+           <h2>Hip Hop</h2>
+
+           <div class="class-images">
+
+               <img src="images/hiphop1_image.jpg" alt="Hip Hop Class 1" class="modal-trigger">
+
+               <img src="images/hiphop2_image.jpg" alt="Hip Hop Class 2" class="modal-trigger">
+
+           </div>
+
+           <p>Energetic and fun, perfect for rhythm and freestyle lovers.</p>
+
+       </div>
+
+
+
+       <!-- Contemporary Class -->
+
+       <div class="class-block">
+
+           <h2>Contemporary</h2>
+
+           <div class="class-images">
+
+               <img src="images/contemporary1_image.jpg" alt="Contemporary Class 1" class="modal-trigger">
+
+               <img src="images/contemporary2_image.png" alt="Contemporary Class 2" class="modal-trigger">
+
+           </div>
+
+           <p>Express yourself through movement and creativity with contemporary dance.</p>
+
+       </div>
+
+   </section>
+
+
+
+   <!-- Weekly Schedule Section -->
+
+   <section class="weekly-schedule">
+
+       <h2>Weekly Schedule</h2>
+
+       <div class="schedule-container">
+
+           <div class="schedule-item">
+
+               <span class="day">Monday:</span>
+
+               <span class="class-name">Hip Hop</span>
+
+               <span class="time">5pm - 6:30pm</span>
+
+           </div>
+
+           <div class="schedule-item">
+
+               <span class="day">Wednesday:</span>
+
+               <span class="class-name">Contemporary</span>
+
+               <span class="time">6pm - 7:30pm</span>
+
+           </div>
+
+           <div class="schedule-item">
+
+               <span class="day">Friday:</span>
+
+               <span class="class-name">Hip Hop & Contemporary Mix</span>
+
+               <span class="time">5pm - 7pm</span>
+
+           </div>
+
+       </div>
+
+   </section>
+
+</main>
+
+
+
+<!-- Modal for Class Images -->
+
+<div class="modal" id="imageModal">
+
+   <img src="" alt="Class Image">
+
+</div>
+
+
+
+<!-- Footer -->
+
+<footer>
+
+   <p>© 2026 Urban Flow Dance Studio. All Rights Reserved.</p>
+
+   <!-- Designer Credit -->
+
+   <p class="designer-credit">Designed & Developed by Japleen Kaur</p>
+
+</footer>
+
+
+
+<script>
+
+   // Modal functionality
+
+   const modal = document.getElementById('imageModal'); // Modal container
+
+   const modalImg = modal.querySelector('img'); // Image inside modal
+
+   const triggers = document.querySelectorAll('.modal-trigger'); // All clickable images
+
+
+
+   // Open modal on image click
+
+   triggers.forEach(img => {
+
+       img.addEventListener('click', () => {
+
+           modal.style.display = 'flex';
+
+           modalImg.src = img.src;
+
+       });
+
+   });
+
+
+
+   // Close modal on click
+
+   modal.addEventListener('click', () => {
+
+       modal.style.display = 'none';
+
+       modalImg.src = '';
+
+   });
+
+</script>
 
 </body>
-
 
 </html>
