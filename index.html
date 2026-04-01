@@ -1,15 +1,283 @@
 <!DOCTYPE html>
-<html lang ="en">
-<head>
-    <link rel="stylesheet" href="css/style.css">
 
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Urban Flow Dance Studio</title>
+
+
+
+   <!-- Google Fonts -->
+
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+
+
+   <!-- Main Stylesheet -->
+
+   <link rel="stylesheet" href="css/style.css">
+
+
+
+   <!-- Lightbox CSS (for image popups) -->
+
+   <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
 
 </head>
+
+
+
 <body>
 
 
 
-</body>
+   <!-- Navigation Bar -->
 
+   <header>
+
+       <nav class="navbar">
+
+
+
+           <!-- Logo -->
+
+           <div class="logo">
+
+               <img src="images/logo.png" class="logo-img" alt="Urban Flow Logo">
+
+           </div>
+
+
+
+           <!-- Navigation Links -->
+
+           <ul class="nav-menu">
+
+               <li><a href="home.html">Home</a></li>
+
+               <li><a href="classes.html">Classes</a></li>
+
+               <li><a href="contact.html">Join</a></li>
+
+           </ul>
+
+
+
+       </nav>
+
+   </header>
+
+
+
+   <!-- Hero Section -->
+
+   <section class="hero">
+
+       <img src="images/hero_image.jpeg" class="hero-image" alt="Dance Background">
+
+
+
+       <div class="hero-content">
+
+           <h1>Urban Flow Dance Studio</h1>
+
+           <p>Where Hip Hop Meets Contemporary. Move. Groove. Shine.</p>
+
+       </div>
+
+   </section>
+
+
+
+   <main>
+
+
+
+       <!-- Dance Styles Section -->
+
+       <section class="image-section">
+
+           <h2 class="section-title">Our Dance Styles</h2>
+
+
+
+           <div class="image-container">
+
+
+
+               <!-- Contemporary Card -->
+
+               <div class="image-card">
+
+                   <img src="images/contemporary_image.jpeg" alt="Contemporary Dance" onclick="openModal(this.src)">
+
+                   <h3>Contemporary</h3>
+
+                   <p>Expressive movement focusing on emotion, flow and storytelling.</p>
+
+               </div>
+
+
+
+               <!-- Hip Hop Card -->
+
+               <div class="image-card">
+
+                   <img src="images/hip hop_image.jpg" alt="Hip Hop Dance" onclick="openModal(this.src)">
+
+                   <h3>Hip Hop</h3>
+
+                   <p>Energetic street style with rhythm, attitude and creativity.</p>
+
+               </div>
+
+
+
+           </div>
+
+       </section>
+
+
+
+       <!-- Image Modal Popup -->
+
+       <div id="imageModal" class="modal" onclick="closeModal()">
+
+           <img id="modalImg">
+
+       </div>
+
+
+
+       <!-- Mission Section -->
+
+       <section class="mission">
+
+           <h2>Our Mission</h2>
+
+
+
+           <div class="mission-container">
+
+
+
+               <!-- Mission Card 1 -->
+
+               <div class="mission-card">
+
+                   <img src="images/professional instructors_image.jpg" alt="Professional Instructors">
+
+                   <h3>Professional Instructors</h3>
+
+               </div>
+
+
+
+               <!-- Mission Card 2 -->
+
+               <div class="mission-card">
+
+                   <img src="images/inclusive environment_image.jpeg" alt="Inclusive Environment">
+
+                   <h3>Inclusive Environment</h3>
+
+               </div>
+
+
+
+               <!-- Mission Card 3 -->
+
+               <div class="mission-card">
+
+                   <img src="images/fun and creativity_image.jpg" alt="Fun and Creativity">
+
+                   <h3>Fun and Creativity</h3>
+
+               </div>
+
+
+
+           </div>
+
+       </section>
+
+
+
+       <!-- Call-to-Action Section -->
+
+       <section class="info-section">
+
+           <div class="info-container">
+
+               <h2>Join Our Classes</h2>
+
+               <p>Whether you’re a beginner or advanced dancer, we have classes that fit your style and energy.</p>
+
+               <a href="contact.html" class="btn">Sign Up Now</a>
+
+           </div>
+
+       </section>
+
+
+
+   </main>
+
+
+
+   <!-- Footer -->
+
+   <footer>
+
+       <div class="footer-content">
+
+           <p>© 2026 Urban Flow Dance Studio. All Rights Reserved.</p>
+
+           <p class="designer-credit">Designed & Developed by Japleen Kaur</p>
+
+       </div>
+
+   </footer>
+
+
+
+   <!-- Lightbox JS -->
+
+   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+
+
+
+   <script>
+
+       /* Open image modal */
+
+       function openModal(src) {
+
+           document.getElementById("imageModal").style.display = "flex";
+
+           document.getElementById("modalImg").src = src;
+
+       }
+
+
+
+       /* Close image modal */
+
+       function closeModal() {
+
+           document.getElementById("imageModal").style.display = "none";
+
+       }
+
+   </script>
+
+
+
+</body>
 
 </html>
